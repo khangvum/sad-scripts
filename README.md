@@ -1,1 +1,8 @@
-# sad-scripts
+# System Administrator Scripts
+
+A **_system administrator_** (**_sysadmin_**/**_SAD_**) **_reference_** of **_commands_**, **_scripts_**, and **_notes_** for **_Linux_**, **_Windows_**, **_VMware_** environments and supporting tools such as **_Git_**. This repository serves as a **_quick-access knowledge base_** for everyday **_administration_**, **_troubleshooting_**, and **_automation tasks_**.
+
+## Windows
+
+-   [Windows Server](Windows/windows-server.md)
+-   [Windows](Windows/windows.md)
