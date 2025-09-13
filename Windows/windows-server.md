@@ -7,7 +7,7 @@ For **_core Windows commands_**, see **_[windows.md](windows.md)_**.
 Upgrade from **_Evaluation_** to **_Standard_**:
 
 ```powershell
-DISM /online /Set-Edition:ServerStandard /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula
+DISM /Online /Set-Edition:ServerStandard /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula
 ```
 
 ## `Windows + R` Shortcuts
