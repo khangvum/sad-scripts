@@ -59,7 +59,7 @@ net accounts /maxpwage:unlimited
 ## `Windows + R` Shortcuts
 
 Shortcut        |Description
-:--------------:|-------------------------
+:--------------:|------------------------------------------------
 `msinfo32`      |System Information
 `ncpa.cpl`      |Network Connections
 `sysdm.cpl`     |System Properties
@@ -68,5 +68,6 @@ Shortcut        |Description
 `regedit`       |Registry Editor
 `gpedit.msc`    |Local Group Policy Editor
 `services.msc`  |Services
+`wf.msc`        |Windows Defender Firewall with Advanced Security
 `cmd`           |Command Prompt
 `powershell`    |PowerShell
