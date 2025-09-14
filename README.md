@@ -5,6 +5,7 @@ A **_system administrator_** (**_sysadmin_**/**_SAD_**) **_reference_** of **_co
 ## Hyper-V
 
 -   [VM Creation](Hyper-V/vm-creation.ps1)
+-   [VM Update](Hyper-V/vm-update.ps1)
 
 ## Windows
 
