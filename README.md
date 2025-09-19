@@ -6,6 +6,10 @@ A **_system administrator_** (**_sysadmin_**/**_SAD_**) **_reference_** of **_co
 
 -   [VM Management](Hyper-V/vm-management.ps1)
 
+## VMware
+
+-   [ESXi](VMware/esxi.md)
+
 ## Windows
 
 -   [Windows Server](Windows/windows-server.md)
