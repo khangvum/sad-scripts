@@ -1,21 +1,29 @@
 # ESXi Scripts
 
-## ESXi Update/Patching
+## Maintenance Mode
 
-1.  **Connect to ESXi host:**
+-   **Enter maintenance mode:**
 
     ```shell
-    ssh root@<IP_ADDRESS>
+    esxcli system maintenanceMode set --enable true
     ```
 
-2.  **List the available image profiles:**
+-   **Exit maintenance mode:**
+
+    ```shell
+    esxcli system maintenanceMode set --enable false
+    ```
+
+## ESXi Update/Patching
+
+1.  **List the available image profiles:**
 
     ```shell
     esxcli software sources profile list -d /vmfs/volumes/<DATASTORE>/ISO/<OFFLINE_BUNDLE>.zip
     # esxcli software sources profile list -d /vmfs/volumes/datastore1/ISO/VMware-VMvisor-Installer-8.0.0.update03.zip
     ```
 
-3.  **Update/Patch the host to the selected profile:**
+2.  **Update/Patch the host to the selected profile:**
 
     ```shell
     esxcli software profile update -p <PROFILE_NAME> -d /vmfs/volumes/<DATASTORE>/ISO/<OFFLINE_BUNDLE>.zip
