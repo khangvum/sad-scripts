@@ -55,6 +55,20 @@
     esxcli storage core adapter rescan --all
     ```
 
+## Networking Management
+
+-   **List all network interfaces:**
+
+    ```shell
+    esxcli network nic list
+    ```
+
+-   **Check IP configuration:**
+
+    ```shell
+    esxcli network ip interface ipv4 get
+    ```
+
 ## ESXi Update/Patching
 
 1.  **List the available image profiles:**
