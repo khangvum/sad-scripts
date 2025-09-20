@@ -1,5 +1,32 @@
 # ESXi Scripts
 
+## System Management
+
+-   **Check ESXi version/build:**
+
+    ```shell
+    vmware -v
+    esxcli system version get
+    ```
+
+-   **Shutdown host:**
+
+    ```shell
+    # Maintenance mode required (best practice)
+    esxcli system shutdown poweroff -r <REASON>
+    # No maintenance mode required (not recommended)
+    poweroff
+    ```
+
+-   **Reboot host:**
+
+    ```shell
+    # Maintenance mode required (best practice)
+    esxcli system shutdown reboot -r <REASON>
+    # No maintenance mode required (not recommended)
+    reboot
+    ```
+
 ## Maintenance Mode
 
 -   **Enter maintenance mode:**
@@ -13,7 +40,7 @@
     ```shell
     esxcli system maintenanceMode set --enable false
     ```
-
+    
 ## ESXi Update/Patching
 
 1.  **List the available image profiles:**
