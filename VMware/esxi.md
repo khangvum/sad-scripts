@@ -40,7 +40,21 @@
     ```shell
     esxcli system maintenanceMode set --enable false
     ```
-    
+
+## Storage Management
+
+-   **List all datastores:**
+
+    ```shell
+    esxcli storage filesystem list
+    ```
+
+-   **Rescan storage adapters:**
+
+    ```shell
+    esxcli storage core adapter rescan --all
+    ```
+
 ## ESXi Update/Patching
 
 1.  **List the available image profiles:**
