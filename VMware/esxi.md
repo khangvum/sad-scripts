@@ -71,7 +71,8 @@
 
 ## VM Management
 
-These VM management commands work directly with standalone ESXi host if vCenter is not available.
+>   [!NOTE]
+>   These VM management commands work directly with standalone ESXi host if vCenter is not available.
 
 -   **List all VMs:**
 
