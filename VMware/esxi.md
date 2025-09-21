@@ -1,4 +1,4 @@
-# ESXi Scripts
+# VMware ESXi Scripts
 
 ## System Management
 
