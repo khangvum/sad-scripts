@@ -9,6 +9,7 @@ A **_system administrator_** (**_sysadmin_**/**_SAD_**) **_reference_** of **_co
 ## VMware
 
 -   [ESXi](VMware/esxi.md)
+-   [Workstation](VMware/workstation.md)
 
 ## Windows
 
