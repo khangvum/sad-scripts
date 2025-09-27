@@ -1,5 +1,9 @@
 # VMware Workstation Scripts
 
+>   [!NOTE]
+>   If `vmrun` is not in the PATH, use the full path. The default is:
+>   `C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe`
+
 ## General Management
 
 -   **List all running VMs:**
