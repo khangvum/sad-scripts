@@ -41,6 +41,29 @@
     esxcli system maintenanceMode set --enable false
     ```
 
+## VM Management
+
+>   [!NOTE]
+>   These VM management commands work directly with standalone ESXi host if vCenter is not available.
+
+-   **List all VMs:**
+
+    ```shell
+    vim-cmd vmsvc/getallvms
+    ```
+
+-   **Power on a VM:**
+
+    ```shell
+    vim-cmd vmsvc/power.on <VMID>
+    ```
+
+-   **Power off a VM:**
+
+    ```shell
+    vim-cmd vmsvc/power.off <VMID>
+    ```
+
 ## Storage Management
 
 -   **List all datastores:**
@@ -67,29 +90,6 @@
 
     ```shell
     esxcli network ip interface ipv4 get
-    ```
-
-## VM Management
-
->   [!NOTE]
->   These VM management commands work directly with standalone ESXi host if vCenter is not available.
-
--   **List all VMs:**
-
-    ```shell
-    vim-cmd vmsvc/getallvms
-    ```
-
--   **Power on a VM:**
-
-    ```shell
-    vim-cmd vmsvc/power.on <VMID>
-    ```
-
--   **Power off a VM:**
-
-    ```shell
-    vim-cmd vmsvc/power.off <VMID>
     ```
 
 ## ESXi Update/Patching
