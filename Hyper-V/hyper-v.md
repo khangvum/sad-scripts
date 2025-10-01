@@ -23,13 +23,10 @@
 
     ```powershell
     New-VM -Name <HOSTNAME> -MemoryStartupBytes <MEMORY>GB -BootDevice CD -NewVHDPath "C:\Hyper-V Virtual Machines\<HOSTNAME>.vhdx" -NewVHDSizeBytes <STORAGE>GB -Path "C:\Hyper-V Virtual Machines\<HOSTNAME>" -Generation <GENERATION>
-
     # Disable dynamic memory
     Set-VMMemory -VMName <HOSTNAME> -DynamicMemoryEnabled $false
-
     # Attach the ISO file
     Set-VMDvdDrive -VMName <HOSTNAME> -Path "C:\Hyper-V Virtual Machines\<ISO_PATH>" 
-
     # Set the CPU
     Set-VMProcessor -VMName <HOSTNAME> -Count <CPU>
     ```
