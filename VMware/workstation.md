@@ -1,7 +1,7 @@
 # VMware Workstation Scripts
 
 >   [!NOTE]
->   If `vmrun` is not in the PATH, use the full path. The default is:
+>   If `vmrun` is **_not_** in the **_PATH_**, use the **_full path_**. The **_default_** is:
 >   `C:\Program Files (x86)\VMware\VMware Workstation\vmrun.exe`
 
 ## General Management
