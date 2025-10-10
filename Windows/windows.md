@@ -47,6 +47,53 @@ Rename-Computer -NewName <HOSTNAME> -Restart
     net localgroup Administrators <USERNAME> /delete
     ```
 
+## Networking Management
+
+-   **Get IP configuration:**
+
+    ```powershell
+    ipconfig /all
+    ```
+
+-   **Get MAC addresses:**
+
+    ```powershell
+    # PowerShell
+    Get-NetAdapter | Select-Object Name, InterfaceDescription, MacAddress
+    # Command Prompt
+    getmac /v
+    ```
+
+-   **Test network connectivity:**
+
+    ```powershell
+    # PowerShell
+    Test-NetConnection -ComputerName <TARGET> -Port <PORT>
+    # Command Prompt
+    ping <TARGET>
+    telnet <TARGET> <PORT>
+    ```
+
+-   **Refresh network configuration**
+
+    ```powershell
+    # PowerShell
+    Remove-NetIPAddress -InterfaceAlias <INTERFACE> -Confirm:$false
+    Set-NetIPInterface -InterfaceAlias <INTERFACE> -Dhcp Enabled
+    Clear-DnsClientCache
+    
+    # Command Prompt
+    ipconfig /release
+    ipconfig /renew
+    ipconfig /flushdns
+    ```
+
+-   **Get routing table:**
+
+    ```powershell
+    route print
+    ```
+
 ## Password Expiration
 
 ```powershell
