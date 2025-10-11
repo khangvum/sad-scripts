@@ -80,3 +80,20 @@
     ```powershell
     Unlock-ADAccount -Identity "<USERNAME>"
     ```
+
+## Password Management
+
+-   **View current password policy:**
+
+    ```powershell
+    Get-ADDefaultDomainPasswordPolicy
+    ```
+
+-   **Modify domain password policy:**
+
+    ```powershell
+    Set-ADDefaultDomainPasswordPolicy -Identity "khangvum.lab" `
+        -MaxPasswordAge "00:00:00" `
+        -MinPasswordAge "00:00:00" `
+        -PasswordHistoryCount 5
+    ```
