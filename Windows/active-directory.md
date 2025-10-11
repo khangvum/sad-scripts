@@ -34,11 +34,49 @@
 -   **Join a computer to a domain:**
 
     ```powershell
-    Add-Computer -DomainName "khangvum.lab" -Server <IP_ADDRESS> -Credential khangvum\<USERNAME> -Restart -Verbose
+    Add-Computer -DomainName "khangvum.lab" -Server "<IP_ADDRESS>" -Credential "khangvum\<USERNAME>" -Restart -Verbose
     ```
 
 -   **Move a computer to an OU:**
 
     ```powershell
     Move-ADObject -Identity "CN=<HOSTNAME>,CN=Computers,DC=khangvum,DC=lab" -TargetPath "OU=<OU>,DC=khangvum,DC=lab"
+    ```
+
+## User Management
+
+-   **Create a new user:**
+
+    ```powershell
+    New-ADUser -Name "<FULL_NAME>" `
+        -GivenName "<FIRST_NAME>" `
+        -Surname "<LAST_NAME>" `
+        -DisplayName "<FULL_NAME>" `
+        -SamAccountName "<USERNAME>" `
+        -UserPrincipalName "<USERNAME>@<DOMAIN>" `
+        -EmailAddress "<USERNAME>@<DOMAIN>" `
+        -Path "CN=Users,DC=khangvum,DC=lab" `
+        -AccountPassword (Read-Host -AsSecureString "Enter Password") `
+        -Enabled $true
+    ```
+
+-   **Reset user password:**
+
+    ```powershell
+    Set-ADAccountPassword -Identity "<USERNAME>" -Reset -NewPassword (Read-Host -AsSecureString "New Password")
+    ```
+
+-   **Enable/Disable a user:**
+
+    ```powershell
+    # Enable a user
+    Enable-ADAccount -Identity "<USERNAME>"
+    # Disable a user
+    Disable-ADAccount -Identity "<USERNAME>"
+    ```
+
+-   **Unlock a user:**
+
+    ```powershell
+    Unlock-ADAccount -Identity "<USERNAME>"
     ```
