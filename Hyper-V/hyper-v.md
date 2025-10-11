@@ -22,37 +22,37 @@
 -   **Create a new VM:**
 
     ```powershell
-    New-VM -Name <HOSTNAME> -MemoryStartupBytes <MEMORY>GB -BootDevice CD -NewVHDPath "C:\Hyper-V Virtual Machines\<HOSTNAME>.vhdx" -NewVHDSizeBytes <STORAGE>GB -Path "C:\Hyper-V Virtual Machines\<HOSTNAME>" -Generation <GENERATION>
+    New-VM -Name "<HOSTNAME>" -MemoryStartupBytes "<MEMORY>"GB -BootDevice CD -NewVHDPath "C:\Hyper-V Virtual Machines\<HOSTNAME>.vhdx" -NewVHDSizeBytes "<STORAGE>"GB -Path "C:\Hyper-V Virtual Machines\<HOSTNAME>" -Generation "<GENERATION>"
     # Disable dynamic memory
-    Set-VMMemory -VMName <HOSTNAME> -DynamicMemoryEnabled $false
+    Set-VMMemory -VMName "<HOSTNAME>" -DynamicMemoryEnabled $false
     # Attach the ISO file
-    Set-VMDvdDrive -VMName <HOSTNAME> -Path "C:\Hyper-V Virtual Machines\<ISO_PATH>" 
+    Set-VMDvdDrive -VMName "<HOSTNAME>" -Path "C:\Hyper-V Virtual Machines\<ISO_PATH>" 
     # Set the CPU
-    Set-VMProcessor -VMName <HOSTNAME> -Count <CPU>
+    Set-VMProcessor -VMName "<HOSTNAME>" -Count "<CPU>"
     ```
 
 -   **Start a VM:**
 
     ```powershell
-    Start-VM -Name <HOSTNAME>
+    Start-VM -Name "<HOSTNAME>"
     ```
 
 -   **Stop a VM:**
 
     ```powershell
-    Stop-VM -Name <HOSTNAME>
+    Stop-VM -Name "<HOSTNAME>"
     ```
 
 -   **Restart a VM:**
 
     ```powershell
-    Restart-VM -Name <HOSTNAME>
+    Restart-VM -Name "<HOSTNAME>"
     ```
 
 -   **Remove a VM:**
 
     ```powershell
-    Remove-VM -Name <HOSTNAME>
+    Remove-VM -Name "<HOSTNAME>"
     ```
 
 ## Checkpoint Management
@@ -60,25 +60,25 @@
 -   **List all checkpoints:**
 
     ```powershell
-    Get-VMSnapshot -VMName <HOSTNAME>
+    Get-VMSnapshot -VMName "<HOSTNAME>"
     ```
 
 -   **Create a checkpoint:**
 
     ```powershell
-    Checkpoint-VM -Name <HOSTNAME> -SnapshotName <SNAPSHOT_NAME>
+    Checkpoint-VM -Name "<HOSTNAME>" -SnapshotName "<SNAPSHOT_NAME>"
     ```
 
 -   **Restore a checkpoint:**
 
     ```powershell
-    Restore-VMSnapshot -VMName <HOSTNAME> -Name <SNAPSHOT_NAME>
+    Restore-VMSnapshot -VMName "<HOSTNAME>" -Name "<SNAPSHOT_NAME>"
     ```
 
 -   **Delete a checkpoint:**
 
     ```powershell
-    Remove-VMSnapshot -VMName <HOSTNAME> -Name <SNAPSHOT_NAME>
+    Remove-VMSnapshot -VMName "<HOSTNAME>" -Name "<SNAPSHOT_NAME>"
     ```
 
 ## Storage Management
@@ -86,13 +86,13 @@
 -   **Create a new virtual disk:**
 
     ```powershell
-    New-VHD -Path "C:\Hyper-V Virtual Machines\<HOSTNAME>.vhdx" -SizeBytes <STORAGE>GB -Dynamic
+    New-VHD -Path "C:\Hyper-V Virtual Machines\"<HOSTNAME>".vhdx" -SizeBytes "<STORAGE>"GB -Dynamic
     ```
 
 -   **Resize a disk:**
 
     ```powershell
-    Resize-VHD -Path "C:\Hyper-V Virtual Machines\<HOSTNAME>.vhdx" -SizeBytes <STORAGE>GB
+    Resize-VHD -Path "C:\Hyper-V Virtual Machines\"<HOSTNAME>".vhdx" -SizeBytes "<STORAGE>"GB
     ```
 
 -   **Compact a disk:**
@@ -113,18 +113,18 @@
 
     Type        |Command
     :----------:|----------------
-    **External**|`New-VMSwitch -Name <SWITCH_NAME> -NetAdapterName <ADAPTER_NAME> -AllowManagementOS $true -EnableIov $true`
-    **Internal**|`New-VMSwitch -Name <SWITCH_NAME> -SwitchType Internal`
-    **Private** |`New-VMSwitch -Name <SWITCH_NAME> -SwitchType Private`
+    **External**|`New-VMSwitch -Name "<SWITCH_NAME>" -NetAdapterName ""<ADAPTER_NAME>"" -AllowManagementOS $true -EnableIov $true`
+    **Internal**|`New-VMSwitch -Name "<SWITCH_NAME>" -SwitchType Internal`
+    **Private** |`New-VMSwitch -Name "<SWITCH_NAME>" -SwitchType Private`
 
 -   **Add a new NIC to a VM:**
 
     ```powershell
-    Add-VMNetworkAdapter -VMName <HOSTNAME> -Name <ADAPTER_NAME> -SwitchName <SWITCH_NAME>
+    Add-VMNetworkAdapter -VMName "<HOSTNAME>" -Name "<ADAPTER_NAME>" -SwitchName "<SWITCH_NAME>"
     ```
 
 -   **Connect an existing NIC to a VM:**
 
     ```powershell
-    Connect-VMNetworkAdapter -VMName <HOSTNAME> -Name <ADAPTER_NAME> -SwitchName <SWITCH_NAME>
+    Connect-VMNetworkAdapter -VMName "<HOSTNAME>" -Name "<ADAPTER_NAME>" -SwitchName "<SWITCH_NAME>"
     ```

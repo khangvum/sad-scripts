@@ -55,18 +55,18 @@
 -   **Create a snapshot:**
 
     ```powershell
-    vmrun -T ws snapshot "C:\VMware Virtual Machines\<HOSTNAME>\<HOSTNAME>.vmx" <SNAPSHOT_NAME>
+    vmrun -T ws snapshot "C:\VMware Virtual Machines\<HOSTNAME>\<HOSTNAME>.vmx" "<SNAPSHOT_NAME>"
     ```
 
 -   **Revert to a snapshot:**
 
     ```powershell
-    vmrun -T ws revertToSnapshot "C:\VMware Virtual Machines\<HOSTNAME>\<HOSTNAME>.vmx" <SNAPSHOT_NAME>
+    vmrun -T ws revertToSnapshot "C:\VMware Virtual Machines\<HOSTNAME>\<HOSTNAME>.vmx" "<SNAPSHOT_NAME>"
 
     ```
 
 -   **Delete a snapshot:**
 
     ```powershell
-    vmrun -T ws deleteSnapshot "C:\VMware Virtual Machines\<HOSTNAME>\<HOSTNAME>.vmx" <SNAPSHOT_NAME>
+    vmrun -T ws deleteSnapshot "C:\VMware Virtual Machines\<HOSTNAME>\<HOSTNAME>.vmx" "<SNAPSHOT_NAME>"
     ```
