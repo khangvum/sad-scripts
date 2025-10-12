@@ -113,7 +113,7 @@
 
     Type        |Command
     :----------:|----------------
-    **External**|`New-VMSwitch -Name "<SWITCH_NAME>" -NetAdapterName ""<ADAPTER_NAME>"" -AllowManagementOS $true -EnableIov $true`
+    **External**|`New-VMSwitch -Name "<SWITCH_NAME>" -NetAdapterName "<ADAPTER_NAME>" -AllowManagementOS $true -EnableIov $true`
     **Internal**|`New-VMSwitch -Name "<SWITCH_NAME>" -SwitchType Internal`
     **Private** |`New-VMSwitch -Name "<SWITCH_NAME>" -SwitchType Private`
 
