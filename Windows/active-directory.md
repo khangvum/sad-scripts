@@ -92,7 +92,7 @@
 -   **Modify domain password policy:**
 
     ```powershell
-    Set-ADDefaultDomainPasswordPolicy -Identity "khangvum.lab" `
+    Set-ADDefaultDomainPasswordPolicy -Identity (Get-ADDomain).DNSRoot `
         -MaxPasswordAge "00:00:00" `
         -MinPasswordAge "00:00:00" `
         -PasswordHistoryCount 5
