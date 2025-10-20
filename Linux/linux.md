@@ -18,3 +18,17 @@
     **Memory (RAM)**    |`lsmem`
     **Storage (block)** |`lsblk`
     **PCI devices**     |`lspci`
+
+## Power Management
+
+-   **Reboot the system:**
+
+    ```shell
+    sudo reboot
+    ```
+
+-   **Shut down the system:**
+
+    ```shell
+    sudo poweroff
+    ```
