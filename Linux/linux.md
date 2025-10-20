@@ -32,3 +32,23 @@
     ```shell
     sudo poweroff
     ```
+
+## Process Management
+
+-   **List running processes:**
+
+    ```shell
+    ps aux
+    ```
+
+-   **Monitor ongoing processes:**
+
+    ```shell
+    top    # Classic version
+    htop   # More modern and interactive version
+    ```
+
+-   **Kill a process:**
+
+    ```shell
+    kill -9 "<PID>"
