@@ -61,6 +61,12 @@
     systemctl list-units --type=service
     ```
 
+-   **Check service status:**
+
+    ```shell
+    systemctl status "<SERVICE>"
+    ```
+
 -   **Start/Stop/Restart a service:**
 
     Action      |Command
@@ -68,12 +74,6 @@
     **Start**   |`sudo systemctl start "<SERVICE>"`
     **Stop**    |`sudo systemctl stop "<SERVICE>"`
     **Restart** |`sudo systemctl restart "<SERVICE>"`
-
--   **Check service status:**
-
-    ```shell
-    systemctl status "<SERVICE>"
-    ```
 
 -   **Enable/Disable a service on boot:**
 
