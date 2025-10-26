@@ -94,6 +94,22 @@ Rename-Computer -NewName "<HOSTNAME>" -Restart
     route print
     ```
 
+## System Repair
+
+-   **System File Checker (SFC):**
+
+    ```powershell
+    sfc /scannow
+    ```
+
+-   **Deployment Image Servicing and Management (DISM):**
+
+    ```powershell
+    DISM /Online /Cleanup-Image /CheckHealth
+    DISM /Online /Cleanup-Image /ScanHealth
+    DISM /Online /Cleanup-Image /RestoreHealth
+    ```
+
 ## Password Expiration
 
 ```powershell
