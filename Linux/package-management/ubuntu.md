@@ -14,6 +14,12 @@
     apt search "<PACKAGE>"
     ```
 
+-   **Fix broken dependencies:**
+
+    ```shell
+    sudo apt install -f
+    ```
+
 -   **Remove/Purge a package:**
 
     ```shell
@@ -21,4 +27,21 @@
     sudo apt remove -y "<PACKAGE>"
     # Remove all, including configuration files
     sudo apt purge -y "<PACKAGE>"
+    ```
+
+## `dpkg` Management
+
+-   **Check if a specific package is installed:**
+
+    ```shell
+    dpkg -l | grep "<PACKAGE>"
+    ```
+
+-   **Remove/Purge a package:**
+
+    ```shell
+    # Remove package binaries only, keep configuration files
+    sudo dpkg -r "<PACKAGE>"
+    # Remove all, including configuration files
+    sudo dpkg -P "<PACKAGE>"
     ```
