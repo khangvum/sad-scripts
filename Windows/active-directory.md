@@ -63,7 +63,7 @@
 -   **Reset user password:**
 
     ```powershell
-    Set-ADAccountPassword -Identity "<USERNAME>" -Reset -NewPassword (Read-Host -AsSecureString "New Password")
+    Set-ADAccountPassword -Identity "<USERNAME>" -Reset -NewPassword (Read-Host -AsSecureString "Enter New Password")
     ```
 
 -   **Enable/Disable a user:**
