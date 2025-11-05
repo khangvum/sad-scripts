@@ -13,6 +13,7 @@ A **_system administrator_** (**_sysadmin_**/**_SAD_**) **_reference_** of **_co
 
 -   **Package Management:**
     
+    -   [NixOS](Linux/package-management/nixos.md)
     -   [Ubuntu](Linux/package-management/ubuntu.md)
 
 -   [Linux](Linux/linux.md)
