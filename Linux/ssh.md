@@ -40,3 +40,17 @@
     ```shell
     cat ~/.ssh/id_rsa.pub
     ```
+
+## File Transfer
+
+-   **Copy files to a remote host:**
+
+    ```shell
+    scp "<LOCAL_FILE>" "<USER>"@"<TARGET>":"<REMOTE_PATH>"
+    ```
+
+-   **Copy files from a remote host:**
+
+    ```shell
+    scp "<USER>"@"<TARGET>":"<REMOTE_FILE>" "<LOCAL_PATH>"
+    ```
