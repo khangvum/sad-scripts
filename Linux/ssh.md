@@ -20,6 +20,12 @@
     ssh "<USER>"@"<TARGET>" "<COMMAND>"
     ```
 
+-   **Remove a host key from `known_hosts`:**
+
+    ```shell
+    ssh-keygen -R "<TARGET>"
+    ```
+
 ## Key Generation & Authentication
 
 1.  **Generate a new SSH key pair:**
