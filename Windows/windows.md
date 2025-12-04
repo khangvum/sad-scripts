@@ -110,6 +110,12 @@ Rename-Computer -NewName "<HOSTNAME>" -Restart
     DISM /Online /Cleanup-Image /RestoreHealth
     ```
 
+-   **Check disk for filesystem errors:**
+
+    ```powershell
+    chkdsk /f
+    ```
+
 ## Password Expiration
 
 ```powershell
