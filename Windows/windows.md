@@ -140,3 +140,6 @@ Shortcut        |Description
 `wf.msc`        |Windows Defender Firewall with Advanced Security
 `cmd`           |Command Prompt
 `powershell`    |PowerShell
+
+>   [!TIP]
+>   To run any command as **_administrator_**, press `Ctrl + Alt + Enter`
