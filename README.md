@@ -20,6 +20,7 @@ A **_system administrator_** (**_sysadmin_**/**_SAD_**) **_reference_** of **_co
 
 ### VMware
 
+-   [ESXi VM Management](VMware/esxi-vm-management.sh)
 -   [ESXi](VMware/esxi.md)
 -   [Workstation](VMware/workstation.md)
 
