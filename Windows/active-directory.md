@@ -23,6 +23,20 @@
     Get-ADDomainController -Filter *
     ```
 
+## Replication Management
+
+-   **Force synchronization between all domain controllers:**
+
+    ```powershell
+    repadmin /syncall /AeP
+    ```
+
+-   **Verify replication health with no replication latencies:**
+
+    ```powershell
+    replication latencies
+    ```
+
 ## Computer Management
 
 -   **List all computers in the domain:**
