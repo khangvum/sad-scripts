@@ -34,7 +34,7 @@
 -   **Verify replication health with no replication latencies:**
 
     ```powershell
-    replication latencies
+    repadmin /replsummary
     ```
 
 ## Computer Management
