@@ -44,10 +44,10 @@
 >   2.  **_Navigate_** to: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`.
 >   3.  Create a new **_DWORD (32-bit) Value_**:
 >
->   Field       |Value  
->   :----------:|:-------------------------------------------
->   **Name**    |`Replication Authenticator Compatibility`
->   **Value**   |`1`
+>       Field       |Value  
+>       :----------:|:-------------------------------------------
+>       **Name**    |`Replication Authenticator Compatibility`
+>       **Value**   |`1`
 >
 >   4.  Attempt the **_replication command_** again: `repadmin /syncall /AeP`.
 >   5.  Once **_successful_**, **_delete the registry key_** to return to standard security protocols.
