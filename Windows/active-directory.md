@@ -37,6 +37,21 @@
     repadmin /replsummary
     ```
 
+>   [!TIP]
+>   In case a **_secondary DC_** (_e.g.,_ KVM-DC02) has been **_offline_** for **_too long_** (typically **_more than a week_**) and encounters **_authentication issues during sync_**, follow these steps to restore the connection:
+>   
+>   1.  On the **_secondary DC_**, open **_Registry Editor_**.
+>   2.  **_Navigate_** to: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`.
+>   3.  Create a new **_DWORD (32-bit) Value_**:
+>
+>   Field       |Value  
+>   :----------:|:-------------------------------------------
+>   **Name**    |`Replication Authenticator Compatibility`
+>   **Value**   |`1`
+>
+>   4.  Attempt the **_replication command_** again: `repadmin /syncall /AeP`.
+>   5.  Once **_successful_**, **_delete the registry key_** to return to standard security protocols.
+
 ## Computer Management
 
 -   **List all computers in the domain:**
